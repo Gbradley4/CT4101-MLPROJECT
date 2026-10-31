@@ -84,7 +84,9 @@ Potential data leakage was considered during feature selection, and `PageValues`
 
 ## Assistance Declaration
 
-ChatGPT was used to assist with understanding lecture concepts, developing and explaining Python code, interpreting data audit and model evaluation results, and reviewing project documentation. The code and results were executed and checked within Jupyter Notebook.
+ChatGPT was used to assist with 
+- understanding lecture concept
+- developing and explaining Python code, particularly explaining error messages when they arrised
 
 ## Dataset Reference
 
