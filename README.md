@@ -9,14 +9,14 @@ Dataset : The project uses the Online Shoppers Purchasing Intention Dataset from
 
 Milestone 1 - Completed Proposal
 
-Milestone 2 - In Progress
+Milestone 2 - Completed
 Data Audit - Completed
-Data Preprocessing - In Progress
-Baseline Model - Pending
+Data Preprocessing - Completed
+Baseline Model - Completed
 
 # Set up instructions
 - Download this repository
 - Install the required Python Packages
-- Download the dataset from the UCI repository and save it in a documented data location
+- Download the dataset from the repository and save it in a documented data location
 - Open this notebook in jupyter
 - Run the notebook cells from top to bottom
