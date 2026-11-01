@@ -59,12 +59,15 @@ Although the baseline achieved 84.35% accuracy, it failed to identify any purcha
 
 ## Setup Instructions
 
-1. Download or clone this GitHub repository.
-2. Install Python and Jupyter Notebook.
-3. Install the required packages using `pip install -r requirements.txt`.
-4. Ensure the dataset is located at `Data/online_shoppers_intention.csv`.
-5. Open `Milestone 2 - Attempt 2.ipynb` in Jupyter Notebook from the project directory.
-6. Run all notebook cells in order.
+1. Download the repository by clicking Code → Download ZIP on GitHub.
+2. Extract the ZIP file to a folder on your computer.
+3. Open Anaconda Prompt.
+4. Navigate to the extracted project folder using:
+   cd /d "path_to_your_project_folder"
+5. Launch Jupyter Notebook by typing:
+jupyter notebook
+6. Open the .ipynb notebook file in Jupyter.
+7. Select Kernel → Restart & Run All to execute the notebook.
 
 ## Planned Models
 
@@ -87,6 +90,8 @@ Potential data leakage was considered during feature selection, and `PageValues`
 ChatGPT was used to assist with 
 - understanding lecture concept
 - developing and explaining Python code, particularly explaining error messages when they arrised
+- creating the readme.md document - setup instructions in particular
+- requirements file
 
 ## Dataset Reference
 
