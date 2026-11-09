@@ -57,41 +57,93 @@ Implemented a majority-class `DummyClassifier` to establish a baseline for futur
 
 Although the baseline achieved 84.35% accuracy, it failed to identify any purchasing sessions. This demonstrates the limitations of accuracy when evaluating imbalanced classification datasets.
 
+### Milestone 3 — Model Development and Comparison
+
+**Completed**
+
+Implemented three supervised classification models:
+
+- Logistic Regression
+- K-Nearest Neighbours (KNN)
+- Decision Tree
+
+Each model was evaluated using accuracy, precision, recall, F1-score and confusion matrices.
+
+Parameter tuning was investigated using `GridSearchCV` with five-fold stratified cross-validation. The F1-score was used to select parameter settings.
+
+**Model Comparison Results**
+
+| Model | Accuracy | Precision | Recall | F1-score |
+|---|---:|---:|---:|---:|
+| Dummy Classifier | 84.35% | 0.00% | 0.00% | 0.00% |
+| Logistic Regression | 84.31% | 48.28% | 3.66% | 6.81% |
+| Tuned Logistic Regression | 64.89% | 27.87% | 78.27% | 41.10% |
+| KNN (k=5) | 82.02% | 31.85% | 13.09% | 18.55% |
+| Tuned KNN (k=3) | 80.70% | 30.22% | 17.80% | 22.41% |
+| Decision Tree | 76.03% | 28.36% | 34.82% | 31.26% |
+
+**Key Findings**
+
+The tuned Logistic Regression model achieved the highest recall (78.27%) and F1-score (41.10%), making it the strongest model tested for identifying purchasing sessions according to these metrics.
+
+However, it produced 774 false positives, demonstrating the trade-off between identifying more purchases and incorrectly predicting purchases.
+
+KNN showed some improvement following parameter tuning, while both Decision Tree tuning experiments selected the default parameter settings.
+
+An error analysis was conducted to compare false positives and false negatives across the models. Interactive visualisations were created using Plotly to support the comparison.
+
 ## Setup Instructions
 
-1. Download the repository by clicking Code → Download ZIP on GitHub.
+1. Download the repository by clicking **Code → Download ZIP** on GitHub.
 2. Extract the ZIP file to a folder on your computer.
 3. Open Anaconda Prompt.
 4. Navigate to the extracted project folder using:
-   cd /d "path_to_your_project_folder"
-5. Launch Jupyter Notebook by typing:
-jupyter notebook
-6. Open the .ipynb notebook file in Jupyter.
-7. Select Kernel → Restart & Run All to execute the notebook.
 
-## Planned Models
+   `cd /d "path_to_your_project_folder"`
 
-Future modelling will investigate:
+5. Install the required Python packages:
 
+   `pip install -r requirements.txt`
+
+6. Launch Jupyter Notebook:
+
+   `jupyter notebook`
+
+7. Open the `.ipynb` notebook file in Jupyter.
+8. Ensure the dataset is located at `Data/online_shoppers_intention.csv`.
+9. Select **Kernel → Restart & Run All** to execute the notebook.
+
+## Models Implemented
+
+The following classification models have been implemented and evaluated:
+
+- Dummy Classifier (baseline)
 - Logistic Regression
 - K-Nearest Neighbours
 - Decision Tree
 
-These models will be compared with the majority-class baseline.
+The models were compared using the same stratified train/test split and evaluation metrics.
 
 ## Limitations
 
 The dataset contains class imbalance, extreme numerical observations and session-level features that may not all be available during a real-time prediction.
 
-Potential data leakage was considered during feature selection, and `PageValues` was excluded from the initial model.
+Potential data leakage was considered during feature selection, and `PageValues` was excluded from the initial feature set.
+
+Although the tuned Logistic Regression model improved recall, it also produced a large number of false positives. This demonstrates the need to consider the practical consequences of incorrect predictions when selecting a model.
+
+The findings are based on a single dataset and a limited set of model configurations. Further evaluation would be required before using the models in a real-world application.
 
 ## Assistance Declaration
 
-ChatGPT was used to assist with 
-- understanding lecture concept
-- developing and explaining Python code, particularly explaining error messages when they arrised
-- creating the readme.md document - setup instructions in particular
-- requirements file
+ChatGPT was used to assist with:
+
+- Understanding CT4101 lecture concepts and machine learning terminology.
+- Explaining Python code, including helping to interpret and resolve error messages.
+- Reviewing notebook structure, Markdown explanations and visualisations.
+- Creating and updating the `README.md` document, particularly the setup instructions.
+
+The Python code was executed in Jupyter Notebook, and the outputs and results were reviewed as part of the project.
 
 ## Dataset Reference
 
